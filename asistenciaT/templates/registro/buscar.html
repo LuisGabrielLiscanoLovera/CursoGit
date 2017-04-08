@@ -1,0 +1,60 @@
+{% extends 'base/base.html'%}
+{%load static%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+{%block content%}
+<div class="container">
+        {% if busqueda %}
+    <div class="col-xs-12"><h1 class="text-center text-muted table-bordered">Historial Hicc</h1></div>    
+    <div class="row table-bordered">
+        <div class="col-xs-3 well table-bordered">
+        
+        <ins><h1 class="text-center">Equipo:</ins></h1>    
+        <h1 class="text-center"><p class="glyphicon glyphicon-circle-arrow-right"> <code> {{ q }} </code></p></h1>
+        <pre>Coincidencia encontradas:{{ busqueda|length }} </pre>
+        </div>
+        <div class="col-xs-9">
+        <table class="well table table-bordered table-hover table-condensed table-responsive text-muted ">
+        <caption class="caption text-muted">Historial del equipo: {{ q }}</caption>
+            
+
+        <thead class="bg-primary">
+            <tr class="text-center">
+                <td>Serial</td>
+                <td>Fecha</td>
+                <td>Tecnico</td>
+                <td>Historico</td>
+                <td>Estatus</td>
+            </tr>
+        </thead>
+    
+        <tbody>
+            
+        {% for busqueda in busqueda %}
+            <tr>
+                <td>{{ busqueda.serial }}</td>
+                <td>{{ busqueda.fecha }}</td>
+                <td>{{ busqueda.tecnico }}</td>
+                <td>{{ busqueda.historico |safe}}</td>
+                <td>{{busqueda.estado}}</td>
+        {% endfor %}
+            </tr>
+                    {% else %}
+                    <pre>Ningun SERIAL coincide con el criterio de busqueda.</pre>
+                    {% endif %}
+            </tr>
+        </tbody>
+        </table>
+
+            
+        </div>
+
+
+        </div><br>
+
+
+
+
+</div>
+{% endblock%}

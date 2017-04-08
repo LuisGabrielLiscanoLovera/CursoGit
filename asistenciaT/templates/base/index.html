@@ -1,0 +1,50 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+{% load staticfiles %}
+<head><meta charset="utf-8"></head>
+{%block content%}
+<body onload="alert('Paguina cargada')">
+
+<!--
+<script>
+    var nombre = prompt("ingrese su nombre");
+    var ver =confirm("Desea mostrar suy nombre");
+    if (ver==true){document.write("Bienvenido ", nombre);}else{document.write("Bienvenido Anonimo")}
+    
+</script>
+-->
+
+<div class="container well"><seccion>
+    <article>
+        <h1 class="text-center table-bordered text-muted">Dirección a edificio “Mega Mariche” soporte técnico </h1>
+        
+                <p class="text-justify  lead">
+                Enviar el equipo a nuestro taller de servicio técnico para que nuestro personal
+                capacitado realice el diagnostico del problema, por otra parte, las mismas
+                deberán ser enviadas en sus cajas de embalaje que coincida el serial con el
+                del equipo biométrico en caso de que se ejecute el cambio por garantía.
+                Por favor remitir a la siguiente dirección:
+                Carretera Petare Santa Lucia, Km 1, Edif MEGA
+                Referencia: Al lado de los depósitos de Central Madeirense,
+                cerca del Concesionario Toyota.
+
+                </p>
+             
+    </article>
+</seccion>
+
+<seccion>
+    <article class="marquee ">
+        <marquee><h3>{{tiempo|date:"d M Y "}}{{hora}}</h3></marquee>
+    </article>
+</seccion>
+</div>
+
+
+
+</body>   
+
+{% endblock%}

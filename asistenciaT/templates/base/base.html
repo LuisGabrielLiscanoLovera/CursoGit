@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es">
+
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Hicc"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <style>
+
+      body {
+          background: url({% static 'img/fondo5.jpg' %}) no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+
+  
+      h1,p,a,li,ul{font-family: 'Indie Flower', cursive;}
+      a,.b:hover{
+        box-shadow: 15px 0px 0px 20px rgba(0,0,0,0.05);
+        color: #fff;
+        transition: all 0.9s linear;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        font-size: 20px;
+            }
+      a:hover{
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05);
+        transition: all 0.9s linear;
+
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;        
+                    }
+     
+      h1:hover{
+       
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05);       
+        transition: all 0.9s linear;
+        background-color:rgba(0,0,0,0.2);
+        background:url({% static 'img/fondo3.jpg' %}) !important;
+        font-size: 35px;
+        color:#fff;
+        -webkit-border-radius:50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;        
+                    }
+      pre:hover{
+        color: #FFF !important;
+        transition: all 0.9s linear !important;
+        -webkit-border-radius: 50px !important;
+        -moz-border-radius: 50px !important;
+        border-radius: 50px !important;
+        box-shadow: 10px 5px 10px 5px rgb(0,0,0,0.5) !important;
+                    }
+       code:hover{
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05);
+        color: #fff;  
+        transition: all 0.9s linear;
+        background-color: black;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;        
+                    }
+        button:hover{
+        box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.05);       
+        color: #fff;
+        transition: all 0.9s linear;
+        background-color: black;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;        
+                    }
+     
+        img:hover{
+        transition: all 0.9s linear;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 10px;
+        box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+
+                    }
+       
+       img{
+        height: 100px;
+        width:150px;        
+        margin-left: 50%;
+
+        
+       }
+      .hv:hover{
+        box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.05);        
+        transition: all 0.9s linear;
+        background-color: black;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+
+                    }
+        
+      .f:hover{
+        transition: all 0.9s linear;
+        font-size: 25px;
+          }
+      
+      .well{
+
+        color:  !important;
+        background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT9rNgXscO-7-UmXAtbMUDs_z7G1DrxXIhTjvDa2NC7BsK3iR66g) !important;
+      }        
+
+      .well:hover{
+        color: #FFF !important;
+        transition: all 0.9s linear !important;
+        background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99WdlWvrs52buqDIaE06WBG2uKNA4Jf9yBa4HLkwOBaxjB3wq) !important;/*( {% static 'img/fondo3.jpg' %}) !important;*/
+        -webkit-border-radius: 50px !important;
+        -moz-border-radius: 50px !important;
+        border-radius: 50px !important;
+        box-shadow: 10px 5px 10px 5px rgb(0,0,0,0.5) !important;
+      }
+     .table:hover{
+        color: #f7f7f7 !important;
+        font-size: 20px !important; 
+        transition: all 0.9s linear !important;
+        -webkit-border-radius: 50px !important;
+        -moz-border-radius: 50px !important;
+        border-radius: 50px !important;
+        box-shadow: 10px 5px 10px 20px rgb(0,0,0,0.5) !important;
+      }
+      .table-hover > tbody > tr:hover {
+          background-color: #670202;
+        }
+
+    </style>
+    <!--<link rel="stylesheet" href="{% static 'fonts/glyphicons-halflings-regular.eot' %}"
+
+background-image: url({% static 'img/fondo.jpg' %});
+
+    -->
+
+    <!--<link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"-->
+    <!--<link rel="stylesheet" href="{{STATIC_URL}}css/textoplano.css">-->
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SSAS</title><!-- Bootstrap-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <!<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
+     <!--  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <!--[endif]-->
+  </head>
+
+    <!-- <style type="text/css">
+    body{
+      background-image: url("{% static 'img/fondo.jpg' %}");
+    }
+  <div align="centrer"><img src="{% static 'img/logo Minpal.png' %}" height="200px" width="200px" ><caption>SSAS</caption></div>
+  </style>-->
+
+{%block header%}
+
+
+<div class="container-fluid">
+<header class=" dropdown dropdown-header ">
+    <div class="row">
+            <div class="col-md-12 col-sm-12 col-md-12 col-lg-12" >
+                <h1 class="text-center text-muted">
+                    <span class="icon-cloud"> Departamento de Asistencia Tecnica SSAS </span><span class="icon-cloud"></span>
+                </h1>
+            </div>
+       
+     <div class="row">
+     <div class="col-md-12 text-center">
+        <div class="btn-group">
+                <nav class="login">
+                       <ul  class="nav nav-tabs nav-tabs-justified">
+                            <li role="presentation"><a href="{%url 'FDR' %}" class="btn btn-danger icon-classic-computer">Registro HICC</a></li>
+                            <li role="presentation"><a href="{%url 'FRP' %}" class="btn btn-danger icon-archive"> Registro de Repuestos biometricos</a></li>
+                            <li role="presentation"><a href="{%url 'registro' %}" class="btn btn-danger icon-cycle"> Equipos registrados HICC</a></li>
+                            <li role="presentation"><a href="{%url 'repuesto' %}" class="btn btn-danger btn icon-cycle"> Repuestos disponibles HICC</a></li>           
+                            <li role="presentation"><a href="{%url 'home' %}" class="btn btn-danger icon-layers "> Proximamente licencia</a></li>
+                            <li role="presentation"><a href="{%url 'logout' %}" class="btn btn-danger icon-log-out" > Desconexion</a></li>
+                        </ul>
+                      
+                </nav>
+      </div>
+    </div>  
+</div>
+
+    </div>
+   
+        
+    </header></div>
+
+
+  {% endblock %}
+
+
+  {%block content%}
+
+  <h1>Hola {{name}}</h1>
+
+  {% endblock %}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+   
+
+
+
+{%block footer%}
+<div class="container-fluid modal-footer b ">
+  <p>SSAS soporte tecnico HICC°</p>
+  <p class="glyphicon glyphicon-copyright-mark text-muted">Create by <code class="f">{{name}}</code> 2017</p>
+  <span onclick="alert('Esto es js!');"><p>Clik aqui&iacute;</p></span>
+</div>
+{%endblock%}
+
+</html> 

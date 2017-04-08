@@ -1,0 +1,16 @@
+{% extends 'base/base.html'%}
+{%load static%}
+
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+<h1>estoy aqui</h1>
+<form method="post">{% csrf_token %}
+{{form.as_p}}
+<input type="submit" value="Registrar" />
+</form>
+<a class="btn btn-danger" href="{% url 'home' %}">Editar</a>
+{%endblock%}

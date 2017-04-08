@@ -1,0 +1,27 @@
+{% extends 'base/base.html'%}
+{% block title %}
+SSAS Login
+{% endblock %}
+{%block content%}
+<h1>Asistencia Tecnica SSAS LOGIN</h1>
+<h1>Login</h1>
+{% if message %}
+<b>{{message}}</b>
+{%endif%}
+
+<form action="" method="post"> {% csrf_token %}
+{{form.as_p}}
+<input  type="submit" value="enviar">
+</form>
+
+
+
+
+
+
+
+{% endblock%}
+
+{%block footer%}
+<p>Create by {{name}} 2016</p>
+{%endblock%}

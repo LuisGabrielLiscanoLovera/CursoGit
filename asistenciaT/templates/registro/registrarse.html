@@ -1,0 +1,27 @@
+{% extends 'base/base.html'%}
+{%load static%}
+{%load bootstrap%}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+
+<div class="container">
+<div class="row">
+
+<div class="form-group table table-bordered well">
+<legend><code><h1 class="text-center text-muted">Registro de nuevo usuario</h1></code></legend>
+	<form method="post">
+	    {% csrf_token %}
+	    {{ form|bootstrap}}
+	    <input type="submit" value="Registrarse" class="btn btn-dange reg btn-block">
+
+	</form>
+</div>
+</div>
+
+
+</div>
+{%endblock%}
