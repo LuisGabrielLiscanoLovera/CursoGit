@@ -1,0 +1,40 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{% load bootstrap %}
+{% block title %}
+formulario de registro de maquina
+{% endblock %}
+
+
+
+{%block content%}
+<div class="container well">
+<div class="col-md-8 well">	
+	<legend><h1 class="text-center text-muted">Repuesto de biometrico HICC <span class="glyphicon glyphicon-briefcase glyphicon-align-justify"></span></h1></legend>
+    <div class="table-bordered table-hover">
+      <div class="form-grou ">
+		<form method="POST" class="text-muted" style="font-size:15px ">{% csrf_token %}
+        <!--{{form.as_table}}-->
+			{{form|bootstrap}}
+			<br><br>
+        	<button type="submit" class="btn-block btn btn-danger icon-aircraft "> Enviar</button>
+	   	</form>
+	  </div>
+    </div>	
+	</div>
+	<div class="col-md-4 well center-block">
+	<seccion>
+	    <article class="seccion">
+	        <h3 class="text-center help-block"><pre>Requerimiento</pre></h3>
+	        <p class="text-justify help-block table-bordered">
+	     	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, ab ad necessitatibus, illum tempora quaerat vitae ea distinctio aspernatur quae reiciendis mollitia sapiente quod quam autem error sint suscipit? Dolorem!
+	     	</p><br><br>
+	    </article>
+	</seccion>
+		
+	</div>
+</div>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,92 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{% block title %}
+SSAS Login
+{% endblock %}
+{% block header %}
+
+{% endblock %}
+
+{%block content%}
+
+<div class="container ">
+    
+    <div class="row alert-dismissable">
+        <div class="table-bordered modal-header">
+            <div class="col-xs-12">    
+                <h1 class="text-center text-muted ">Asistencia tecnica SSAS</h1>
+                
+            </div>
+          {% if user.is_authenticated %}
+          <div class="table-bordered table">
+
+            
+          <h4 class="text-center" style="color: red">Bienvenido usuario({{user.username|capfirst}})</h4>                  
+          
+          <div class="row">
+                <div class="col-xs-2 col-xs-offset-4 col-xs-pull-5 col-xs-push-1 ">
+                    <div class="btn-group-xs">
+                      <a href="home/" class="hv btn btn-danger ">Inicio</a>
+                      <a href="logout/admin" class="hv btn btn-danger ">Cerrar seccion</a>
+                    </div>
+                </div>
+          </div>
+        </div>       
+                          
+    
+    </div>
+
+    
+{% else %}        
+  
+
+    <div>
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 hv login well animated zoomIn">
+
+
+    <table class=" text-danger center-block ">
+       
+         
+      
+       <div class="form-group text-center ">
+            <h3 class="animated rollIn">Sistema de control biometrico</h3>
+                   <form method="POST" class="form-inline "> {% csrf_token %}
+                    
+                   
+                        <tr class="col-lg-offset-1 col-md-12  img animated bounceInUp  img-responsive" style="">
+                            <td><input type="text" name="username" placeholder="Usuario" id="inputEmail" class="control-label"></td>
+                            <td><input type="password" name="password" placeholder="Clave" id="inputPassword" class="control-label"></td>
+                            <td><button type="submit" value="Entrar" class="btn btn-danger btn-sm control-label "> Aceptar <pan class=" glyphicon glyphicon-ok animated infinite tada"></pan></button></td>
+                        </tr>
+                        
+                   </form>
+           
+            <div class="table-bordered bg-success">
+                <caption class="caption">
+                <img id="logo" src="{% static 'img/logoCASA.png' %}" class="img animated zoomIn img-responsive" width="" height="" srcset="img/LC@100x.png 5x"  >Loguin...</caption>
+            </div>
+        
+     
+       </div>
+   </table>
+    
+      
+{% endif %}
+
+    </div>
+    <div class="col-xs-12 "> <a href="registrarse/" class="
+btn btn-danger btn-sm text-left btn-block    "><span class="glyphicon glyphicon-align-justify"> Registrarse</span></a></div>
+     
+</div>
+
+</div>
+</div>
+
+
+{%endblock%}
+
+
+
+

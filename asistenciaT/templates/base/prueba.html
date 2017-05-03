@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta</title>
+</head>
+<body>
+<h1>Este es una prueba de consulta</h1>
+
+
+{%for i in DT%}
+<ul><li>{{i.nombres|upper}}, {{i.apellidos}}, {{i.cedula}}, {{i.sexo}}, {{i.telefono}}</li>{%endfor%}</ul>
+</body>
+</html>

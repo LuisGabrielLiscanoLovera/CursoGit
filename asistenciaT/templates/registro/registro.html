@@ -1,0 +1,60 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+<head><meta charset="utf-8"></head>
+
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+<div class="container">
+<h1 class="text-center text-muted animated zoomIn ">Historial</h1>
+
+    <div class="text-right ">
+    
+    <div class="form-group ">
+    <p class="text-right text-primary">Busqueda de equipos registrados</p>
+      <form action="{%url 'buscar' %}" method="get" class="form">{% csrf_token %}
+          <input class="control-label" list="HICC" type="text" name="q" placeholder="SERIAL"/>
+          <datalist id="HICC"/>
+              <option value="GWRHICCA000"></option>
+              <option value="GWRHICCA0000"></option>
+          </datalist>
+          <button type="submit" value="Buscar" class="btn btn-xs btn-danger">Buscar</button>
+      </form>
+
+    </div>
+    </div>
+
+<div>
+
+<table class="well table table-bordered table-hover table-condensed table-responsive"><!--<caption>HICC</caption>-->
+  <thead class="" style="color:#FFF">
+    <tr class="text-center">        
+        
+        <th class="text-center " style="background-color:#b50016">Serial</th>
+        <th class="text-center " style="background-color:#b50016">Fecha</th>
+        <th class="text-center " style="background-color:#b50016">Tecnico</th>
+        <th class="text-center " style="background-color:#b50016">Historia</th>
+        <th class="text-center " style="background-color:#b50016">Estatus</th>
+          
+    </tr>
+  </thead>
+{%for i in rg%}
+<tbody>
+      <tr  class="text-center text-muted">
+          <td>{{i.serial|upper}}</td>
+          <td>{{i.fecha}}</td>
+          <td>{{i.tecnico}}</td>
+          <td>{{i.historico|safe}}</td>
+          <td>{{i.estado}}</td>
+      </tr>
+</tbody>
+  {%endfor%}
+</table>
+</div>
+
+    </div>
+
+{%endblock%}

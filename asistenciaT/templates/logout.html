@@ -1,0 +1,36 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{% block title %}
+SSAS Login
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+
+{%block content%}
+<style>a{}</style>
+<div class="container table-bordered">
+	<div class="row">
+		<div class="col-md-12 table-bordered">
+			
+	<header class="modal-header">
+	<h1 class="text-center text-muted">Asistencia Tecnica SSAS </h1>
+			<nav class="nav-stacked navbar-header navbar-btn nav-pills">	
+				<ul class="nav nav-pills nav-justified btn-block">
+					<li><a class="btn btn-sm btn-ms btn-danger" style="font-size: 25px;" href="{%url 'login'%}">Iniciar Seccion <span class="icon-user"></span></a></li>
+				</ul>
+			</nav>
+	</header>		
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+{% endblock %}
+

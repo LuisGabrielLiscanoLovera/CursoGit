@@ -1,0 +1,85 @@
+{% extends 'base/base.html'%}
+{%load static%}
+
+{% block title %}
+formulario de registro de maquina
+{% endblock %}
+{% load bootstrap %} <!--https://github.com/tzangms/django-bootstrap-form  -->
+{%block content%}
+
+
+
+    <style type="text/css">
+       
+         
+       
+    </style> 
+
+<div class="container well">
+    
+    <div class="row">
+        
+
+        <div class="col-xs-3 table-bordered well ">
+                <h1 class="text-center">
+               Registro historico de biometricos                      
+               </h1>
+
+
+               <P>  text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </P>
+        </div>
+
+
+
+        <div class="col-xs-6 table-responsive ">
+            <seccion>
+                <article class="">
+                    <div class="form text-muted well">
+                    <div class="text-center table" style="border: 1px;"><legend><pre><h4 class="text-muted">Registro de equipos Biometricos Hicc</h4></pre></legend></div>
+
+                    <div class="form-group control-label">
+                        <form method="POST" class="form-horizontal">{% csrf_token %}
+                          <!--  {{form.as_p}} col-xs-push-3 col-xs-pull-3 -->
+                            {{ form|bootstrap_horizontal }}
+                            <button type="submit" class="btn btn-sm btn-block btn-danger form-control" style="font-size:25px;border-radius: 20px;">Registrar  <span class="glyphicon icon-save animated infinite tada"></span><!--</span> <div class="input-group-addon">(**,)</div>--></button>
+                        </form>
+                    </div>
+                    
+                   </div>
+                </article>
+            </seccion>
+                    
+        </div>
+
+        <div class="col-xs-3  well ">
+         <h1 class="text-center">
+        Remember                     
+        </h1>
+
+               <P>  text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </P>
+        </div>
+
+       
+    </div>
+
+    
+        
+<!--<a href="{%url 'home' %}"><h2 style="color: #002145">Inicio</h2></a>-->
+</div>
+
+
+
+
+{% endblock %}

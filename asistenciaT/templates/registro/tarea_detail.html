@@ -1,0 +1,15 @@
+{% extends 'base/base.html'%}
+{%load static%}
+
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+<h1>Detalles</h1>
+<td>{{ Registro.serial }}</td>
+<td>{{ Registro.fecha }}</td>
+<td>{{ Registro.tecnico}}</td>
+<td>{{ Registro.historico }}</td>
+{%endblock%}

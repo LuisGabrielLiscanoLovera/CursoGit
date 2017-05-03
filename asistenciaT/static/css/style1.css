@@ -1,0 +1,207 @@
+body{
+    background-color: red;
+   }
+  
+h1{
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+    border-bottom:groove;
+    width: auto;
+    height:auto;
+    color: #dcfff2;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    background-color: #10427b;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    color: #10427b;
+    text-decoration: none;
+
+}
+#navegador{
+    text-decoration: none;
+}
+.marquee {
+    font-family: 'Indie Flower', cursive;
+    color: #000000;
+    font-size: 35px;
+
+    }
+nav ul li {
+    margin: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px;
+    border: solid;
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+    background-color: #16527a;
+
+}
+
+nav ul li:hover{
+    transition:all 0.5s linear;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #3e3e3e;
+    color: #010004;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    border: double;
+    padding: 20px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: #fcfff6;
+    font-size:15px;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+.seccion{
+    width: 450px;
+    height: 300px;
+    border: double #040404 7px;
+    align-items: center;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+    background-color: #10427b;
+    border-radius: 20px;
+}
+.T{
+    margin: 20px;
+    color: #f7e7f6;
+    font-family: 'Indie Flower', cursive;
+}
+.parrafo{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f7f7f7;
+    margin:auto;
+    height: 200px;
+    width: 400px;
+    text-align: justify;
+    resize: both;
+    border-radius:10px;
+    overflow: hidden;
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+
+}
+.post-form{
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    background-color: #10427b;
+    color: #fcfff6;
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 10px 0px 10px 0px rgba(0,0,0,0.5);
+    font-size: 20px;
+}
+label {
+    background-color: #002145;
+    border-radius:20px;
+    border: 20px;
+    text-align: right;
+    color: #f4f4e6;
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+
+}
+
+label:hover{
+    transition: all 0.5s linear;
+    background-color: #3e3e3e;
+    color: #b6c4d8;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    border: solid;
+}
+
+
+input,select,text,#tables{
+    border-radius: 5px;
+    border: double;
+    background-color: #aff4f1;
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+
+button{
+    font-family: 'Indie Flower', cursive;
+    box-shadow: 10px 5px 10px 5px rgba(0,0,0,0.5);
+    padding: 5px;
+    border-radius: 20px;
+    transition: all 0.5s linear;
+    cursor: pointer;
+    background-color:#aff4f1;
+}
+
+a{
+    color: #abc9bc;
+}
+button:hover{
+    transition: all 0.5s linear;
+    background-color: #3e3e3e;
+    color: #b6c4d8;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.reg{
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reg:hover{
+    cursor: pointer;
+    transition: all 0.5s linear;
+    border-radius: 30px;
+    border:30px;
+    font-size: 40px; 
+    padding: 10px;
+    box-shadow: 10px 0px 10px 0px rgba(0.0.0.0,5);
+    background-color:red;
+
+
+}
+#logo{
+    height: 200px;
+    width: 300px;
+    border:20px;
+}
+#tables{
+    border-color:black;
+    border-radius: 20px;
+    display:inline-block;
+    margin: 1px;
+    background-color: black;
+    border: 20px;
+}
+span{
+    margin-left: 20px;
+    margin-top: auto;
+    margin-right: 20px;
+   
+}
+
+caption{
+    font-size: 30px;
+    color: #d2dae9;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+

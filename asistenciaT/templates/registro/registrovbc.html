@@ -1,0 +1,85 @@
+{% extends 'base/base.html'%}
+{%load static%}
+
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+
+
+{%block content%}
+<div class="container">
+
+
+
+
+<h1 class="text-center bg-primary">Historial</h1>
+<a href="{%url 'home' %}"><h1>Inicio</h1></a>
+
+
+
+
+<br><br>
+<h3>Busqueda equipo biometrico</h3>
+<div>
+    <form class="navbar-search pull-left " action="{%url 'buscar' %}" method="POST" class="post-form">
+        {% csrf_token %}
+        <input type="text" class="search-query" placeholder="Buscar" name="q">
+        <div class="btn-group">
+            <button class="btn btn-primary" type="submit" >Enter<i class="icon-search"></i></button>
+
+        </div>
+    </form>
+</div>
+
+<br><h1>Vistas Basadas en clases</h1><br>
+
+
+
+<h1>Ver</h1>
+<br>
+<h1>Editar</h1>
+<br>
+<h1>Borrar</h1>
+
+
+<a href="{% url 'home' %}">Regresar</a>
+</p>
+
+
+
+
+<table style="width: 2px;">
+    <tr>
+    <td>
+        <p style="background-color: #f7f7f7">Serial</p>
+    </td>
+    <td>
+    <p style="background-color: #f7f7f7">Fecha</p>
+    </td>
+
+    <td>
+        <p style="background-color: #f7f7f7"><em>Tecnico</em></p>
+    </td>
+
+    <td><em>
+        <p style="background-color: #f7f7f7">Historia</p>
+    </em></td>
+    </tr>
+    <ul>
+        {% for Registro in object_list %}
+      <tr>
+          <td>{{ Registro.serial }}</td>
+          <td>{{ Registro.fecha }}</td>
+          <td>{{ Registro.tecnico}}</td>
+          <td>{{ Registro.historico }}</td>
+      </tr>
+    </ul>
+{% endfor %}
+
+
+</table>
+<a href="{% url 'eliminar' %}"><h2>Eliminar registro</h2></a>
+
+</div>
+
+{%endblock%}

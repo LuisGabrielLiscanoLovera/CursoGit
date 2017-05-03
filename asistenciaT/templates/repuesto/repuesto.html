@@ -1,0 +1,81 @@
+{% extends 'base/base.html'%}
+{% load staticfiles %}
+{% block title %}
+HICC Soporte SSAS
+{% endblock %}
+{%block content%}
+
+
+<div class="container">
+    
+
+<div class="row">
+    <div class="col-ms-12 well">
+    <h1 class="text-center text-muted table-bordered table-condensed">Piezas disponibles</h1>
+ {% for i in R %}
+<section>
+<table id="tables" class=" table table-bordered table table-condensed table-hover table-responsive">
+
+    <article>
+    <tr>
+            <td>Serial</td>
+            <td>Pantall</td>
+            <td>Lector de biometrico</td>
+            <td>Memoria RAM</td>
+            <td>Fan Cooler</td>
+            <td>Micro Computadora</td>
+            <td>Soket de alimentacion</td>
+    </tr>
+    
+        <tr>
+            <td>{{i.serial}}</td>
+            <td>{{i.pantalla|yesno:"0,1"}}</td>
+            <td>{{i.lector|yesno:"0,1"}}</td>
+            <td>{{i.memoria_ram|yesno:"0,1"}}</td>
+            <td>{{i.fan_cooler|yesno:"0,1"}}</td>
+            <td>{{i.computadora|yesno:"0,1"}}</td>
+            <td>{{i.ele|yesno:"0,1"}}</td>
+
+        
+        </tr>
+    </article>
+    
+    </table>
+ {% endfor %}
+</section>
+<!--
+<div class="row table list-inline table-bordered">
+<legend><code class="glyphicon glyphicon-music">Musica F</code></legend>
+<ul>
+</li>
+<li>dog <audio controls><source src="{% static 'sonido/blink .mp3' %}" type="audio/mpeg"></audio></li>
+<li>dog2 <audio controls><source src="{% static 'sonido/blin2.mp3' %}" type="audio/mpeg"></audio></li>
+
+</ul>
+<div class="col-xs-6 col-xs-offset-3 text-center">
+<legend><code><h3 class="text-center glyphicon glyphicon-hd-video">Video</h3>  </code></legend>
+<video width="320" height="240" controls class="well glyphicon glyphicon-facetime-video">
+<source src="{% static 'video/caderas.mp4' %}" type="video/mp4"> 
+Tu Navegador no sopórta
+</video>
+</div>
+-->
+
+</div>
+
+
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock%}
