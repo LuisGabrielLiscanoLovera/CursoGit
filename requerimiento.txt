@@ -1,0 +1,4 @@
+django ==1.10
+django-bootstrap-form  <!--https://github.com/tzangms/django-bootstrap-form  -->
+django-ckeditor
+
